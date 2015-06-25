@@ -26,37 +26,37 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;***Setting Up Port Forwarding***
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***A Very Active Copyright Free Torrent to Test With***
+&nbsp;&nbsp;&nbsp;&nbsp;***A Very Active Copyright Free Torrent to Test With***
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***Checking That the VPN Is Working***
+&nbsp;&nbsp;&nbsp;&nbsp;***Checking That the VPN Is Working***
 
-&nbsp;&nbsp;&nbsp;&nbsp;***Guide to Setting Up VPN Just for Torrenting on Windows - Part 2***
+&nbsp;&nbsp;***Guide to Setting Up VPN Just for Torrenting on Windows - Part 2***
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***Routing Table Functionality***
+&nbsp;&nbsp;&nbsp;&nbsp;***Routing Table Functionality***
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***Advanced Set Up for Windows XP***
+&nbsp;&nbsp;&nbsp;&nbsp;***Advanced Set Up for Windows XP***
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***Set Up for Windows XP Firewall***
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***Set Up for Windows XP Firewall***
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***Routing Table Change to Block Outgoing Native Traffic***
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***Routing Table Change to Block Outgoing Native Traffic***
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***Advanced Set Up for Windows Vista and Windows 7***
+&nbsp;&nbsp;&nbsp;&nbsp;***Advanced Set Up for Windows Vista and Windows 7***
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***Set Up for Windows Firewall with Advanced Security***
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***Set Up for Windows Firewall with Advanced Security***
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Rules for Incoming Connections*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Rules for Incoming Connections*
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Rules for Outgoing Connections*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Rules for Outgoing Connections*
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Specifying the Properties for a Firewall Rule*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Specifying the Properties for a Firewall Rule*
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***Set Up for Torrent Clients***
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***Set Up for Torrent Clients***
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Setting IP Interface for uTorrent*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Setting IP Interface for uTorrent*
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Setting IP Interface for Vuze*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Setting IP Interface for Vuze*
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***Routing Table Changes to Restore Native Gateway***
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***Routing Table Changes to Restore Native Gateway***
 
 ***
 
