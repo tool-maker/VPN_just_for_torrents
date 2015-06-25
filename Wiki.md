@@ -283,7 +283,7 @@ Start up the OpenVPN GUI. On Vista or Windows 7 it will require administrator pr
 
 ![](https://github.com/tool-maker/VPN_just_for_torrents/blob/master/images/openvpnneedsadminls.jpg)
 
-![](https://github.com/tool-maker/VPN_just_for_torrents/blob/master/imagesopenvpnneedsadmin2.jpg)
+![](https://github.com/tool-maker/VPN_just_for_torrents/blob/master/images/openvpnneedsadmin2.jpg)
 
 Either always right-mouse click and "Run as administrator", or alter the desktop icon for the OpenVPN GUI to always run as administrator:
 
