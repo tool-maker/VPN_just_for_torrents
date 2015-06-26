@@ -1,68 +1,68 @@
-***Table of Contents***
+**Table of Contents**
 
-&nbsp;&nbsp;***Guide to Setting Up VPN Just for Torrenting on Windows - Part 1***
+&nbsp;&nbsp;**Guide to Setting Up VPN Just for Torrenting on Windows - Part 1**
 
-&nbsp;&nbsp;&nbsp;&nbsp;***Purpose and Goals***
+&nbsp;&nbsp;&nbsp;&nbsp;**Purpose and Goals**
 
-&nbsp;&nbsp;&nbsp;&nbsp;***IP Interfaces and Routing Table***
+&nbsp;&nbsp;&nbsp;&nbsp;**IP Interfaces and Routing Table**
 
-&nbsp;&nbsp;&nbsp;&nbsp;***Installing OpenVPN***
+&nbsp;&nbsp;&nbsp;&nbsp;**Installing OpenVPN**
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*IP Interfaces Before Install*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IP Interfaces Before Install
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Routing Table Before Install*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Routing Table Before Install
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*IP Interfaces with VPN Down*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IP Interfaces with VPN Down
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Routing Table with VPN Down*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Routing Table with VPN Down
 
-&nbsp;&nbsp;&nbsp;&nbsp;***Configuring OpenVPN to Access Servers***
+&nbsp;&nbsp;&nbsp;&nbsp;**Configuring OpenVPN to Access Servers**
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*IP Interfaces with VPN Up*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IP Interfaces with VPN Up
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Routing Table with VPN Up*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Routing Table with VPN Up
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Comparison of Routing Table with VPN Up Versus Down*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Comparison of Routing Table with VPN Up Versus Down
 
-&nbsp;&nbsp;&nbsp;&nbsp;***Setting Up Port Forwarding***
+&nbsp;&nbsp;&nbsp;&nbsp;**Setting Up Port Forwarding**
 
-&nbsp;&nbsp;&nbsp;&nbsp;***A Very Active Copyright Free Torrent to Test With***
+&nbsp;&nbsp;&nbsp;&nbsp;**A Very Active Copyright Free Torrent to Test With**
 
-&nbsp;&nbsp;&nbsp;&nbsp;***Checking That the VPN Is Working***
+&nbsp;&nbsp;&nbsp;&nbsp;**Checking That the VPN Is Working**
 
-&nbsp;&nbsp;***Guide to Setting Up VPN Just for Torrenting on Windows - Part 2***
+&nbsp;&nbsp;**Guide to Setting Up VPN Just for Torrenting on Windows - Part 2**
 
-&nbsp;&nbsp;&nbsp;&nbsp;***Routing Table Functionality***
+&nbsp;&nbsp;&nbsp;&nbsp;**Routing Table Functionality**
 
-&nbsp;&nbsp;&nbsp;&nbsp;***Advanced Set Up for Windows XP***
+&nbsp;&nbsp;&nbsp;&nbsp;**Advanced Set Up for Windows XP**
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***Set Up for Windows XP Firewall***
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Set Up for Windows XP Firewall**
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***Routing Table Change to Block Outgoing Native Traffic***
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Routing Table Change to Block Outgoing Native Traffic**
 
-&nbsp;&nbsp;&nbsp;&nbsp;***Advanced Set Up for Windows Vista and Windows 7***
+&nbsp;&nbsp;&nbsp;&nbsp;**Advanced Set Up for Windows Vista and Windows 7**
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***Set Up for Windows Firewall with Advanced Security***
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Set Up for Windows Firewall with Advanced Security**
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Rules for Incoming Connections*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rules for Incoming Connections
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Rules for Outgoing Connections*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rules for Outgoing Connections
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Specifying the Properties for a Firewall Rule*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifying the Properties for a Firewall Rule
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***Set Up for Torrent Clients***
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Set Up for Torrent Clients**
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Setting IP Interface for uTorrent*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setting IP Interface for uTorrent
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Setting IP Interface for Vuze*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setting IP Interface for Vuze
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***Routing Table Changes to Restore Native Gateway***
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Routing Table Changes to Restore Native Gateway**
 
 ***
 
-***Guide to Setting Up VPN Just for Torrenting on Windows - Part 1***
+**Guide to Setting Up VPN Just for Torrenting on Windows - Part 1**
 
-***Purpose and Goals***
+**Purpose and Goals**
 
 This guide is about setting up a VPN service on Windows using AirVPN.
 
@@ -91,11 +91,11 @@ I describe the results below. For examples, I use the earliest version of Window
 
 I try to make minimal assumptions about the readers background, in the hope that this will be useful to non-technical readers. To this end, I try to explain the role of IP interfaces and the routing table in networking and how to obtain important information about these.
 
-***IP Interfaces and Routing Table***
+**IP Interfaces and Routing Table**
 
 In a couple of places in what follows I use two commands at the the Windows "Command Prompt" to reveal some useful things about what setting up a VPN does in terms Windows IP interfaces and the Windows routing table. The commands are "ipconfig/all" and "route print".
 
-***Installing OpenVPN***
+**Installing OpenVPN**
 
 Get the "community" version of the unaltered OpenVPN client:
 
@@ -227,7 +227,7 @@ At this point, again use the "ipconfig/all" and "route print" commands at a Wind
 
 Compare these results to what we had before the install. In the sample above, a new IP interface called "Local Area Connection 4" has been created by the install.
 
-***Configuring OpenVPN to Access Servers***
+**Configuring OpenVPN to Access Servers**
 
 Then to get the VPN set up initially, at AirVPN go to "Client Area/Config Generator". The page says "OpenVPN Configuration Generator ". Press the "Invert" button to select all of the servers (why not?). Then select "UDP" under "Protocol" and then "443" under "Port". Agree to the terms of service and press the "Generate" button.
 
@@ -389,7 +389,7 @@ Until we get port forwarding working, there is no point in running your torrent 
 
 Stop your torrent clients again before you shut down the VPN.
 
-***Setting Up Port Forwarding***
+**Setting Up Port Forwarding**
 
 At AirVPN, go to "Client Area/Forwarded ports". The page title is "Your forwarded ports"
 
@@ -423,13 +423,13 @@ Also for Vuze, to turn off UPnP and NAT-PMP use "Tools/Options/Plugins/UPnP" and
 
 Now go back to the AirVPN port forwarding page and click the "Check" button for the port. When this competes the "Status" icon should turn green.
 
-***A Very Active Copyright Free Torrent to Test With***
+**A Very Active Copyright Free Torrent to Test With**
 
 If you want a *very active torrent to test with that has no copyright issues*, use the Ubuntu Desktop torrent:
 
 [http://www.ubuntu.com/download/desktop/alternative-downloads](http://www.ubuntu.com/download/desktop/alternative-downloads)
 
-***Checking That the VPN Is Working***
+**Checking That the VPN Is Working**
 
 To see whether you are receiving incoming connections:
 
@@ -483,9 +483,9 @@ This is a summary taken from the link above:
 	
 	CLOSED       - Server received ACK from client and connection is closed.
 
-***Guide to Setting Up VPN Just for Torrenting on Windows - Part 2***
+**Guide to Setting Up VPN Just for Torrenting on Windows - Part 2**
 
-***Routing Table Functionality***
+**Routing Table Functionality**
 
 In what follows, manipulations of the routing table will be used to achieve certain goals. Some understanding of the routing table will be needed in order for the reader to complete these.
 
@@ -533,13 +533,13 @@ These entries with "128.0.0.0" prevent the "0.0.0.0" from ever being used, becau
 
 The other additional entries serve various purposes which are not relevant to our discussion below.
 
-***Advanced Set Up for Windows XP***
+**Advanced Set Up for Windows XP**
 
 As I explained above, I was not able to find a way under XP to use the native interface for normal activities while using the VPN for the torrent clients. I could not get the torrent clients to use the VPN interface unless it was the default gateway in the routing table. It appears that *you have to use the VPN for everything or nothing*.
 
 However it is possible to use a combination of the firewall and the routing table to ensure that no P2P traffic uses the native interface when the VPN is not running.
 
-***Set Up for Windows XP Firewall***
+**Set Up for Windows XP Firewall**
 
 First I will discuss the firewall. It does not seem to be possible to fully block all torrent traffic from the native interface using just the limited firewall that came with XP.
 
@@ -571,7 +571,7 @@ If you do want to block incoming torrent connections only on the native interfac
 
 Using this approach, you have to define the rules based on the ports rather than the programs, and you will need a TCP and a UDP rule for each port.
 
-***Routing Table Change to Block Outgoing Native Traffic***
+**Routing Table Change to Block Outgoing Native Traffic**
 
 *In order to ensure that outgoing traffic will not go out over the native interface*, one can make a change to the routing table which will guarantee that no traffic of any sort (except the encrypted VPN traffic itself) will be able to find its way to the native interface. Refer to the section "Routing Table Functionality" above. If the VPN goes down, the "128.0.0.0" entries that override the default gateway will be removed by the OpenVPN client. *If the "0.0.0.0" entry is removed, then there will be no default gateway and nothing will be able to find its way out to the internet*.
 
@@ -587,7 +587,7 @@ Note that "192.168.1.254" above must be replaced with the gateway for your nativ
 
 For convenience, you could create two ".bat" files each with one of these commands. I suggest that you place a "pause" command at the end so that the windows that opens to run the command does not disappear before you can see if it worked.
 
-***Advanced Set Up for Windows Vista and Windows 7***
+**Advanced Set Up for Windows Vista and Windows 7**
 
 The set up described below works on either Vista or Windows 7. I use Windows 7, but I have confirmed that it works on Vista using a virtual machine I have with Windows Vista on it.
 
@@ -597,7 +597,7 @@ I also encountered a problem getting the firewall blocking to work fully for Win
 
 But there is a saving grace. Fortunately Vuze has an option that prevents it using the default interface if it is configured to use a specific interface. I use this on Windows 7 too, even though it does not appear to be necessary.
 
-***Set Up for Windows Firewall with Advanced Security***
+**Set Up for Windows Firewall with Advanced Security**
 
 To set up the blocking of both incoming and outgoing connections in the way we need, you have to use "Windows Firewall with Advanced Security", which is separate from "Windows Firewall" in the Windows Start menu. You have to first get into "Administrative Tools". The following screen shot shows how to get into "Windows Firewall with Advanced Security":
 
@@ -797,7 +797,7 @@ Installing (or perhaps running the first time) uTorrent will have created *Inbou
 
 The uTorrent and Vuze installations do not create any *Outbound rules*. So I have created a rule for uTorrent ("_uTorrent") and for Vuze ("_Vuze"). We want these rules to block outgoing traffic over the native interface from our torrent clients. We need these rules to be "blocking" rules, applying to all profiles and all protocols, and with that the "Local IP address" property has been set to "192.168.0.0/16". Make whatever other changes you need to ensure that the rules you create are as in the example above.
 
-***Set Up for Torrent Clients***
+**Set Up for Torrent Clients**
 
 Next we set up the torrent clients to use only the VPN interface. This will give additional assurance that torrent traffic does not go out over the native interface, and also allow us to make the changes to the routing table that will cause the VPN interface to be used only for torrent traffic.
 
@@ -822,7 +822,7 @@ The following screen shot illustrates setting the IP interface for Vuze:
 
 From the menu in Vuze select "Options" and then select "Connection/Advanced Network Settings". First ensure that the check box labelled "Enforce IP bindings even when interfaces are not available, ..." (at the bottom of the page) is enabled. Next fill in the text box labelled "Bind to local IP address or interface". You could fill in the actual IP address of the VPN interface as we did for uTorrent. But it is better to scan the list of interfaces further down the page for the one for the VPN interface. In the sample screen shot you will see that the VPN address "10.4.50.142" goes with the interface "eth5[0]". So I have copied and pasted that into the text box instead. By using the interface name rather than the IP address, I avoid having to change the Vuze set up if the address of my VPN interface changes (when I switch OpenVPN servers for example).
  
-***Routing Table Changes to Restore Native Gateway***
+**Routing Table Changes to Restore Native Gateway**
 
 The final step in this set up is to add some additional routing table entries to restore the native gateway as the default gateway. Recall (see the discussion above) that the OpenVPN client added two routing table entries with a subnet prefix length of 1 bit (net mask 128.0.0.0) in order to override the original routing table entry that made the native interface the default gateway. That original routing table entry (just 1 entry) had a subnet prefix length of 0 bits (net mask 0.0.0.0). Because the subnet prefix length of the routing table entries the VPN client made is longer, and the two entries together cover the full IP address space, these two new entries had the effect of overriding the original default gateway.
 
