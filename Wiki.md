@@ -1,62 +1,62 @@
-**Table of Contents**
+<u>**Table of Contents**</u>
 
-&nbsp;&nbsp;**Guide to Setting Up VPN Just for Torrenting on Windows - Part 1**
+&nbsp;&nbsp;&nbsp;&nbsp;<u>**Guide to Setting Up VPN Just for Torrenting on Windows - Part 1**</u>
 
-&nbsp;&nbsp;&nbsp;&nbsp;**Purpose and Goals**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>**Purpose and Goals**</u>
 
-&nbsp;&nbsp;&nbsp;&nbsp;**IP Interfaces and Routing Table**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>**IP Interfaces and Routing Table**</u>
 
-&nbsp;&nbsp;&nbsp;&nbsp;**Installing OpenVPN**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>**Installing OpenVPN**</u>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IP Interfaces Before Install
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IP Interfaces Before Install
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Routing Table Before Install
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Routing Table Before Install
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IP Interfaces with VPN Down
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IP Interfaces with VPN Down
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Routing Table with VPN Down
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Routing Table with VPN Down
 
-&nbsp;&nbsp;&nbsp;&nbsp;**Configuring OpenVPN to Access Servers**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>**Configuring OpenVPN to Access Servers**</u>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IP Interfaces with VPN Up
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IP Interfaces with VPN Up
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Routing Table with VPN Up
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Routing Table with VPN Up
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Comparison of Routing Table with VPN Up Versus Down
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Comparison of Routing Table with VPN Up Versus Down
 
-&nbsp;&nbsp;&nbsp;&nbsp;**Setting Up Port Forwarding**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>**Setting Up Port Forwarding**</u>
 
-&nbsp;&nbsp;&nbsp;&nbsp;**A Very Active Copyright Free Torrent to Test With**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>**A Very Active Copyright Free Torrent to Test With**</u>
 
-&nbsp;&nbsp;&nbsp;&nbsp;**Checking That the VPN Is Working**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>**Checking That the VPN Is Working**</u>
 
-&nbsp;&nbsp;**Guide to Setting Up VPN Just for Torrenting on Windows - Part 2**
+&nbsp;&nbsp;&nbsp;&nbsp;<u>**Guide to Setting Up VPN Just for Torrenting on Windows - Part 2**</u>
 
-&nbsp;&nbsp;&nbsp;&nbsp;**Routing Table Functionality**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>**Routing Table Functionality**</u>
 
-&nbsp;&nbsp;&nbsp;&nbsp;**Advanced Set Up for Windows XP**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>**Advanced Set Up for Windows XP**</u>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Set Up for Windows XP Firewall**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>**Set Up for Windows XP Firewall**</u>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Routing Table Change to Block Outgoing Native Traffic**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>**Routing Table Change to Block Outgoing Native Traffic**</u>
 
-&nbsp;&nbsp;&nbsp;&nbsp;**Advanced Set Up for Windows Vista and Windows 7**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>**Advanced Set Up for Windows Vista and Windows 7**</u>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Set Up for Windows Firewall with Advanced Security**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>**Set Up for Windows Firewall with Advanced Security**</u>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rules for Incoming Connections
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rules for Incoming Connections
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rules for Outgoing Connections
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rules for Outgoing Connections
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifying the Properties for a Firewall Rule
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifying the Properties for a Firewall Rule
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Set Up for Torrent Clients**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>**Set Up for Torrent Clients**</u>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setting IP Interface for uTorrent
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setting IP Interface for uTorrent
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setting IP Interface for Vuze
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setting IP Interface for Vuze
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Routing Table Changes to Restore Native Gateway**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>**Routing Table Changes to Restore Native Gateway**</u>
 
 ***
 
@@ -99,7 +99,7 @@ In a couple of places in what follows I use two commands at the the Windows "Com
 
 Get the "community" version of the unaltered OpenVPN client:
 
-[http://openvpn.net/index.php/open-source/downloads.html](http://openvpn.net/index.php/open-source/downloads.html)
+<https://openvpn.net/index.php/open-source/downloads.html>
 
 If you have a the 64-bit version of Windows then get the 64-bit version of OpenVPN - "openvpn-install-?-x86_64.exe". But if you do not have 64-bit Windows use the 32-bit version - "openvpn-install-?-i686.exe".
 
@@ -381,7 +381,7 @@ The "Local Area Connection 4" interface has been configured with an IP address a
 
 Now use your browser to go to:
 
-[http://whatismyipaddress.com/](http://whatismyipaddress.com/)
+<https://whatismyipaddress.com/>
 
 Where are you in the world?
 
@@ -399,11 +399,11 @@ Now you need to tell your torrent client to listen on this port.
 
 Here you should first understand about UPnP:
 
-[https://en.wikipedia.org/wiki/Universal_Plug_and_Play](https://en.wikipedia.org/wiki/Universal_Plug_and_Play)
+<https://en.wikipedia.org/wiki/Universal_Plug_and_Play>
 
 And also NAT-PMP:
 
-[http://en.wikipedia.org/wiki/NAT_Port_Mapping_Protocol](http://en.wikipedia.org/wiki/NAT_Port_Mapping_Protocol)
+<https://en.wikipedia.org/wiki/NAT_Port_Mapping_Protocol>
 
 UPnP support in the router allows a program running on your PC to tell your router to set up port forwarding. Most routers now a days support this. NAT-PMP is much less widely implemented. It seems that because of this many people do not realize that incoming connections are being forwarded to their torrent client. When using a VPN, you should turn off UPnP and NAT-PMP in your torrent client.
 
@@ -427,7 +427,7 @@ Now go back to the AirVPN port forwarding page and click the "Check" button for 
 
 If you want a *very active torrent to test with that has no copyright issues*, use the Ubuntu Desktop torrent:
 
-[http://www.ubuntu.com/download/desktop/alternative-downloads](http://www.ubuntu.com/download/desktop/alternative-downloads)
+<http://www.ubuntu.com/download/desktop/alternative-downloads>
 
 **Checking That the VPN Is Working**
 
@@ -445,7 +445,7 @@ If the icon in front of the torrent is green, then you have received incoming co
 
 But there is a *more general and powerful way to check what is happening with a torrent clients IP connections*. There is a useful tool that Microsoft provides - "**Process Explorer**":
 
-[http://technet.microsoft.com/en-ca/sysinternals/bb896653.aspx](http://technet.microsoft.com/en-ca/sysinternals/bb896653.aspx)
+<https://technet.microsoft.com/en-ca/sysinternals/bb896653.aspx>
 
 With it you can see all of the network connections a program is making. Once it is installed, start it and in the process tree that gets shown locate "uTorrent.exe" or "Azureus.exe" under "explorer.exe". Right-mouse click on it and select "Properties..."`. Then select the "TCP/IP" tab. In that uncheck the "Resolve addresses" check box. If you see connections on the port that you set up as the incoming port, that is another indication that you are receiving incoming connections.
 
@@ -459,7 +459,7 @@ In the example above, Vuze is listening for connections on port 63676, so the "E
 
 It can be helpful to sort the items in this display in various orders by clicking on the column headers. The possible states are described here:
 
-[http://support.microsoft.com/kb/137984](http://support.microsoft.com/kb/137984)
+<https://support.microsoft.com/kb/137984>
 
 This is a summary taken from the link above:
 
@@ -491,13 +491,13 @@ In what follows, manipulations of the routing table will be used to achieve cert
 
 You may also want to see the Wikipedia page about the routing table:
 
-[http://en.wikipedia.org/wiki/Routing_table](http://en.wikipedia.org/wiki/Routing_table)
+<https://en.wikipedia.org/wiki/Routing_table>
 
 Please refer to the listings generated by "route print" above.
 
 When a program does an IP "bind" function without specifying a particular IP interface or IP address to bind to, the routing table is used to determine what IP interface to send a packet on, based on the destination. The packet destination is compared against the two values "Network Destination" and "Netmask". These two values together define a "subnet" or "subnetwork". For an explanation of a subnetwork and subnet notations see Wikipedia:
 
-[http://en.wikipedia.org/wiki/Subnetwork](http://en.wikipedia.org/wiki/Subnetwork)
+<https://en.wikipedia.org/wiki/Subnetwork>
 
 The values shown as 4 numbers separated by periods are 32 bit strings, divided up into 4 8 bit chunks, so that each chunk is a value from 0 to 255. But think of these as 32 bit strings.
 
@@ -559,7 +559,7 @@ If you have a router, you may not have had Windows firewall enabled, relying on 
 
 This will allow incoming connections for torrent clients from the native interface too. But you should be able to configure your router so that no incoming connections are forwarded from the internet to your PC. You will have to poke around in its GUI/HTTP interface. Besides turning off any explicit port forwarding in your router, you need to consider UPnP:
 
-[https://en.wikipedia.org/wiki/Universal_Plug_and_Play](https://en.wikipedia.org/wiki/Universal_Plug_and_Play)
+<https://en.wikipedia.org/wiki/Universal_Plug_and_Play>
 
 UPnP support in the router allows a program running on your PC to tell your router to set up port forwarding. Most routers now a days support this. It seems that because of this many people do not realize that incoming connections are being forwarded to their torrent client. The thing is, malicious programs can do this too!
 
@@ -763,7 +763,7 @@ Examining the "route print" output we see that:
 
 For the firewall rules, we need to use the CIDR subnet ("prefix/length") notation:
 
-[http://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation](http://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation)
+<https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation>
 
 We will go with "10.4.0.0/16" as a subnet definition containing the VPN address and with "192.168.0.0/16" as a subnet definition containing our native interface. We need these two subnet definitions to not overlap, and to be big enough that they will not need to change if the address given to us by the VPN DHCP server or our router DHCP server changes. A prefix length of 16 should be plenty for this.
 
