@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<title>Setting Up Squid HTML Proxy under Cygwin to Split Browser Traffic</title>
+<style type="text/css">
+</style>
+</head>
+<body>
+
+<u><h3>Setting Up <a href=http://www.squid-cache.org/>Squid HTML Proxy</a> under
+    <a href=https://cygwin.com/>Cygwin</a> to Split Browser Traffic</h3></u>
+
+<p>You can of course change the various scripts in this folder as you see fit. In fact,
+you definitely will need to inspect them to understand what is going on here. And
+follow some of the web links. The instructions are very brief.
+    
+<p>Here are the contents of this folder for reference:
+
+<pre>
+C:\bat\cygwin_squid>dir /B
+Command Line Options - Mozilla MDN.URL
+Cygwin Installation.URL
+Cygwin.URL
+cygwin_install.bat
+cygwin_installer_download.bat
+cygwin_installer_help.bat
+firefox_create_profile.bat
+firefox_profile_manager.bat
+firefox_with_squid_VPN_tester_profile.bat
+mkshortcut.js
+README.html
+squid Optimising Web Delivery.URL
+squid_setup.sh
+squid_setup_mine.bat
+squid_setup_native.bat
+squid_setup_VPN.bat
+squid_shortcuts_setup.bat
+squid_start.bat
+squid_status.bat
+squid_stop.bat
+Use the Profile Manager to create and remove Firefox profiles Firefox Help.URL
+</pre>
+
+<p>Here are the steps to set this up (run a ".bat" by double-clicking):
+<ol>
+
+<li>Run <b><code>cygwin_installer_download.bat</code></b> to download the
+<a href=https://cygwin.com/install.html target=_blank>Cygwin 32-bit installer</a>,
+<a href=https://cygwin.com/setup-x86.exe download><code>setup-x86.exe</code></a>.
+<p>
+
+<li>Now that we have the installer, install the necessary Cygwin packages to run squid by running
+<b><code>cygwin_install.bat</code></b>.
+<p>
+Just keep pressing the "Next" button. Except that you will have to select a mirror site. University sites are usually good.
+
+<li>Now start the OpenVPN tunnel.<p>
+
+<li><u>This step relies on there being a "128.0.0.0/128.0.0.0"
+routing table entry</u>, which OpenVPN will install if left to its default behaviour
+(<a href=https://community.openvpn.net/openvpn/wiki/Openvpn23ManPage target=_blank>"<code>redirect-gateway def1</code>"</a>). 
+<p>
+With the OpenVPN tunnel running, run <b><code>squid_setup_VPN.bat</code></b> to create the squid configuration file
+<code>squid.conf</code>, (in the same folder).
+<p>Lines similar to these will be put in front of the standard Cygwin squid configuration file:
+<pre>
+
+tcp_outgoing_address 10.4.??.??
+
+dns_nameservers 10.4.0.1
+
+http_port 127.0.0.1:3128
+acl localnet src 127.0.0.1
+http_access allow localnet
+
+# below copied from /etc/squid/squid.conf
+
+</pre>
+<p>
+In order to determine the values to be used for <code>tcp_outgoing_address</code> and <code>dns_nameservers</code>,
+<code>squid_setup_VPN.bat</code> scans the output of "<code>route print</code>", for the "128.0.0.0/128.0.0.0"
+routing table entry. If there is a problem with this,
+you will have to specify values for <code>tcp_outgoing_address</code> and <code>dns_nameservers</code>
+in <code>squid.conf</code> youself (or fix <code>squid_setup_VPN.bat</code> yourself.)
+
+<li>To start squid run <b><code>squid_start.bat</code></b>. There will be <u>no minimized window</u> or anything.
+You will just have squid running in the background.
+
+<p>To see the status of squid run <b><code>squid_status.bat</code></b>. This just shows all running
+Cygwin processes. Just look for "squid" in the output.
+
+<p>To stop squid run <b><code>squid_stop.bat</code></b>. It may take several seconds for suid to stop,
+even when you ry to shut down Windows. I suggest that you stop it first.
+You can keep running <b><code>squid_status.bat</code></b> in order to be sure it is gone.
+
+<li>You can <u>create shortcuts</u> to <code>squid_setup_VPN.bat</code>, <code>squid_start.bat</code>,
+<code>squid_status.bat</code> and <code>squid_stop.bat</code>
+by running <b><code>squid_shortcuts_setup.bat</code></b>. These shortcuts can then be moved or copied
+somewhere more convenient.
+<p>
+
+<li>You will need to <u>set up your browser to use the squid HTML proxy</u> now available at 127.0.0.1:3128.
+<p>
+For Firefox you can do this using the "Open menu" icon in the upper right corner.
+Select "Options" there and then "Advanced/Network/Connection/Settings".
+In that property page select "Manual proxy configuration" and "Use this proxy server for all protocols". And
+fill in "localhost" for "HTTP Proxy" with "3128" for "Port".
+<p>
+
+<li>If you want to be able to <u>browse through the VPN at the same time as you browse normally</u>,
+again with Firefox, you can set up a separate profile just for browsing through squid.
+
+<p>If you have installed Firefox in the default location, you should be able to <u>launch the Firefox profile
+manager</u> by running  <b><code>firefox_profile_manager.bat</code></b>. Or create a shortcut with a command line
+as in that file.
+
+<p>If you create a profile called "squid_VPN_tester" you can
+ <u>launch Firefox with the "squid_VPN_tester" profile</u> using
+<b><code>firefox_with_squid_VPN_tester_profile.bat</code></b>.  Or create a shortcut with a command line
+as in that file.
+
+<p>As a quick and dirty way to set up a profile named "squid_VPN_tester" with its profile
+folder as "<code>profile_squid_VPN_tester</code>" within the current you can run
+"<b><code>firefox_create_profile.bat</code></b>". Remember to remove it later with
+the Profile Manager.
+
+</ol>
+
+</body></html>
