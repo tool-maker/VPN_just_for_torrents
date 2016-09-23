@@ -1,5 +1,3 @@
-<html><body>
-
 <p><span style="text-decoration: underline;"><strong>Setting Up <a target=_blank href="http://www.squid-cache.org/">Squid HTML Proxy</a> under <a target=_blank href="https://cygwin.com/">Cygwin</a> to Split Browser Traffic</strong></span><br />
  <br />
 <a target=_blank href="http://www.squid-cache.org/">Squid</a> is an HTML proxy. And it is available as a package for <a target=_blank href="https://cygwin.com/">Cygwin</a>, which is "a large collection of GNU and Open Source tools which provide functionality similar to a Linux distribution on Windows". This post explains how it can be used to be able to browse over the VPN (even using AirVPN's DNS) in one browser instance, while leaving the default gateway as the native/real gateway and also browsing (or whatever) over that simultaneously. It is also possible to use several web rippers through it - <a target=_blank href="https://github.com/get-iplayer/get_iplayer/wiki/windows">get_iplayer</a>, <a target=_blank href="https://github.com/rg3/youtube-dl/">youtube-dl</a> and <a target=_blank href="https://github.com/K-S-V/Scripts/wiki">AdobeHDS</a>.</p>
@@ -274,5 +272,3 @@ cd %~p0
 C:cygwin_squidbinbash --login -c "cd "$OLDPWD"; /usr/sbin/squid -k shutdown -f $PWD/squid.conf"
 pause
 </pre></p>
-
-</body></html>
